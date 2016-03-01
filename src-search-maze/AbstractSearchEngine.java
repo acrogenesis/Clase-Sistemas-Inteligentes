@@ -57,17 +57,17 @@ public class AbstractSearchEngine {
         int x = loc.width;
         int y = loc.height;
         int num = 0;
-        if (maze.getValue(x - 1, y) == 0 || maze.getValue(x - 1, y) == Maze.GOAL_LOC_VALUE) {
-            tempMoves[num++] = new Dimension(x - 1, y);
-        }
-        if (maze.getValue(x + 1, y) == 0 || maze.getValue(x + 1, y) == Maze.GOAL_LOC_VALUE) {
-            tempMoves[num++] = new Dimension(x + 1, y);
-        }
         if (maze.getValue(x, y - 1) == 0 || maze.getValue(x, y - 1) == Maze.GOAL_LOC_VALUE) {
             tempMoves[num++] = new Dimension(x, y - 1);
         }
         if (maze.getValue(x, y + 1) == 0 || maze.getValue(x, y + 1) == Maze.GOAL_LOC_VALUE) {
             tempMoves[num++] = new Dimension(x, y + 1);
+        }
+        if (maze.getValue(x - 1, y) == 0 || maze.getValue(x - 1, y) == Maze.GOAL_LOC_VALUE) {
+            tempMoves[num++] = new Dimension(x - 1, y);
+        }
+        if (maze.getValue(x + 1, y) == 0 || maze.getValue(x + 1, y) == Maze.GOAL_LOC_VALUE) {
+            tempMoves[num++] = new Dimension(x + 1, y);
         }
         return tempMoves;
     }

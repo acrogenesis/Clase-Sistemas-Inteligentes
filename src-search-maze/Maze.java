@@ -36,12 +36,14 @@ public class Maze {
         /**
          * Randomize the maze by putting up arbitray obsticals
          */
-        int max_obsticles = (width * height) / 3;
-        for (int i=0; i<max_obsticles; i++) {
-            int x = (int)(Math.random()*width);
-            int y = (int)(Math.random()*height);
-            setValue(x, y, OBSTICLE);
-        }
+        // int max_obsticles = (width * height) / 3;
+        // for (int i=0; i<max_obsticles; i++) {
+        //     int x = (int)(Math.random()*width);
+        //     int y = (int)(Math.random()*height);
+        //     setValue(x, y, OBSTICLE);
+        // }
+        setValue(width-1,0,OBSTICLE);
+        setValue(0,height-1,OBSTICLE);
         /**
          * Specify the starting location
          */
